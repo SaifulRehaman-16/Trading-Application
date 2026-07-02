@@ -39,9 +39,9 @@ const Login = () => {
           position: "bottom-right",
         });
 
-        setTimeout(() => {
-          process.env.REACT_APP_DASHBOARD_URL;
-        }, 1000);
+       setTimeout(() => {
+  window.location.href = process.env.REACT_APP_DASHBOARD_URL;
+}, 1000);
       } else {
         toast.error(data.message, {
           position: "bottom-left",
