@@ -10,7 +10,7 @@ const Hero = () => {
         <button className=' rounded-2 btn btn-primary fs-5 ' style={{ width: "20%" }}>My tickets</button>
       </div>
       <div className=' mt-4 border d-flex align-items-center px-3 '>
-        <i class="fa-solid fa-magnifying-glass mx-2"></i>
+        <i className="fa-solid fa-magnifying-glass mx-2"></i>
       
           <input  placeholder='Eg: How do I open my account,How do i activate F&O... ' style={{ height: "55px",border:"none",width:"100%",outline: "none",
   boxShadow: "none", }} />
