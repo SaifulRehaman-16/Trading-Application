@@ -25,7 +25,7 @@ const Login = () => {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:3002/login",
+       `${process.env.REACT_APP_API_URL}/login`,
         inputValue,
         {
           withCredentials: true,
@@ -40,7 +40,7 @@ const Login = () => {
         });
 
         setTimeout(() => {
-          window.location.href = "http://localhost:3001";
+          process.env.REACT_APP_DASHBOARD_URL;
         }, 1000);
       } else {
         toast.error(data.message, {

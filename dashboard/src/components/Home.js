@@ -1,24 +1,32 @@
-import { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import TopBar from "./TopBar";
 import Dashboard from "./Dashboard";
+
+const API = process.env.REACT_APP_API_URL;
+const FRONTEND_URL = process.env.REACT_APP_FRONTEND_URL;
+
 const Home = () => {
   const [username, setUsername] = useState("");
-  
+
   useEffect(() => {
     const verifyUser = async () => {
       try {
-        const { data } = await axios.post(
-          "http://localhost:3002",
-          {},
-          { withCredentials: true }
-        );
-          console.log("Dashboard Verification:", data);
+       const { data } = await axios.post(
+  `${API}/`,
+  {},
+  {
+    withCredentials: true,
+  }
+);
+
+        console.log("Dashboard Verification:", data);
+
         const { status, user, message } = data;
 
         if (status) {
-           setUsername(user);
+          setUsername(user);
 
           toast.success(`Hello ${user}`, {
             position: "top-right",
@@ -29,7 +37,7 @@ const Home = () => {
           });
 
           setTimeout(() => {
-            window.location.href = "http://localhost:3000/login";
+            window.location.href = `${FRONTEND_URL}/login`;
           }, 1500);
         }
       } catch (err) {
@@ -38,7 +46,7 @@ const Home = () => {
         });
 
         setTimeout(() => {
-          window.location.href = "http://localhost:3000/login";
+          window.location.href = `${FRONTEND_URL}/login`;
         }, 1500);
       }
     };
@@ -49,7 +57,7 @@ const Home = () => {
   return (
     <>
       <TopBar username={username} />
-      <Dashboard  />
+      <Dashboard />
       <ToastContainer />
     </>
   );

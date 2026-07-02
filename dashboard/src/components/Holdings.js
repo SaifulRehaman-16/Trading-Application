@@ -6,14 +6,19 @@ import { VerticalGraph } from "./VerticalGraph";
 const Holdings = () => {
 
   const [allHoldings,setAllHoldings]=useState([]);
-  useEffect(()=>{
-    axios.get("http://localhost:3002/allholdings").then((res)=>{
+  useEffect(() => {
+  axios
+    .get(`${process.env.REACT_APP_API_URL}/allholdings`, {
+      withCredentials: true,
+    })
+    .then((res) => {
       console.log(res.data);
       setAllHoldings(res.data);
-
     })
-
-  },[])
+    .catch((err) => {
+      console.log(err);
+    });
+}, []);
 
   //for the bar graph we used https://react-chartjs-2.js.org/
   const labels=allHoldings.map((subArray)=>subArray["name"]);

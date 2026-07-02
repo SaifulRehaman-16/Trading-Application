@@ -18,16 +18,17 @@ const Menu = ({username,gmail}) => {
     setIsProfileDropdownOpen(!isProfileDropdownOpen);
   }
 const logout = async () => {
+
   try {
     await axios.post(
-      "http://localhost:3002/logout",
+      `${process.env.REACT_APP_API_URL}/logout`,
       {},
       {
         withCredentials: true,
       }
     );
 
-    window.location.href = "http://localhost:3000/login";
+    window.location.href = `${process.env.REACT_APP_FRONTEND_URL}/login`;
   } catch (err) {
     console.log(err);
   }
@@ -90,6 +91,7 @@ const logout = async () => {
       </ul>
     </div>
   )}
+  
 </div>
       </div>
     </div>

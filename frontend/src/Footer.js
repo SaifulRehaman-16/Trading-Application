@@ -13,50 +13,50 @@ const Footer = () => {
                     </div>
                     <div className='col'>
                         <h5>Account</h5>
-                        <a href='' className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}> Open demat account</a><br />
-                        <a href='' className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Minor demat account</a><br />
-                        <a href='' className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>NRI demat account</a><br />
-                        <a href='' className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>HUF demat account</a><br />
-                        <a href='' className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Commodity</a><br />
-                        <a href='' className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Dematerialisation</a><br />
-                        <a href='' className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Fund transfer</a><br />
-                        <a href='' className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>MTF</a><br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}> Open demat account</a><br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Minor demat account</a><br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>NRI demat account</a><br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>HUF demat account</a><br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Commodity</a><br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Dematerialisation</a><br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Fund transfer</a><br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>MTF</a><br />
 
                     </div>
                     <div className='col'>
                         <h5>Support</h5>
 
-                        <a href='' className='text-muted' style={{ textDecoration: "none", fontSize:"14px"}}>Contact us</a><br />
-                        <a href='' className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Support portal</a><br />
-                        <a href='' className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>How to file a complaint?</a><br />
-                        <a href='' className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Status of your complaints</a><br />
-                        <a href='' className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Bulletin</a><br />
-                        <a href='' className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Circular</a><br />
-                        <a href='' className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Z-Connect blog</a><br />
-                        <a href='' className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Downloads</a><br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none", fontSize:"14px"}}>Contact us</a><br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Support portal</a><br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>How to file a complaint?</a><br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Status of your complaints</a><br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Bulletin</a><br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Circular</a><br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Z-Connect blog</a><br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Downloads</a><br />
 
                     </div>
                     <div className='col'>
                         <h5>Company</h5>
-                        <a href='' className='text-muted' style={{ textDecoration: "none", fontSize:"14px" }}>About</a><br />
-                        <a href='' className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Philosophy</a><br />
-                        <a href='' className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Press & media</a><br />
-                        <a href='' className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Careers</a><br />
-                        <a href='' className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Zerodha Cares (CSR)</a><br />
-                        <a href='' className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Zerodha.tech</a><br />
-                        <a href='' className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Open source</a><br />
-                        <a href='' className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Referral program</a><br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none", fontSize:"14px" }}>About</a><br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Philosophy</a><br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Press & media</a><br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Careers</a><br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Zerodha Cares (CSR)</a><br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Zerodha.tech</a><br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Open source</a><br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Referral program</a><br />
                     </div>
                     <div className='col mb-5'>
                         <h5>Quick links</h5>
-                        <a href='' className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Upcoming IPOs</a>
-                        <a href='' className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Brokerage charges</a><br />
-                        <a href='' className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Market holidays</a><br />
-                        <a href='' className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Economic calendar</a><br />
-                        <a href='' className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Calculators</a><br />
-                        <a href='' className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Markets</a><br />
-                        <a href='' className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Sectors</a><br />
-                        <a href='' className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Gift Nifty</a><br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Upcoming IPOs</a>
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Brokerage charges</a><br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Market holidays</a><br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Economic calendar</a><br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Calculators</a><br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Markets</a><br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Sectors</a><br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" , fontSize:"14px"}}>Gift Nifty</a><br />
                     </div>
 
                 </div>
@@ -95,16 +95,16 @@ const Footer = () => {
                     justifyContent: "center",
                     gap: "20px"
                 }}>
-                    <a href='' style={{ textDecoration: "none", color: "grey", fontSize: "13px" }}>NSE</a>
-                    <a href='' style={{ textDecoration: "none", color: "grey", fontSize: "13px" }} >BSE</a>
-                    <a href='' style={{ textDecoration: "none", color: "grey", fontSize: "13px" }} >MCX</a>
-                    <a href='' style={{ textDecoration: "none", color: "grey", fontSize: "13px" }} >MSEI</a>
-                    <a href='' style={{ textDecoration: "none", color: "grey", fontSize: "13px" }} >Terms & conditions</a>
-                    <a href='' style={{ textDecoration: "none", color: "grey", fontSize: "13px" }} >Policies & procedures</a>
-                    <a href='' style={{ textDecoration: "none", color: "grey", fontSize: "13px" }} >Privacy policy</a>
-                    <a href='' style={{ textDecoration: "none", color: "grey", fontSize: "13px" }} >Disclosure</a>
-                    <a href='' style={{ textDecoration: "none", color: "grey", fontSize: "13px" }} >For investor's attention</a>
-                    <a href='' style={{ textDecoration: "none", color: "grey", fontSize: "13px" }} >Investor charter</a>
+                    <a href="/" style={{ textDecoration: "none", color: "grey", fontSize: "13px" }}>NSE</a>
+                    <a href="/" style={{ textDecoration: "none", color: "grey", fontSize: "13px" }} >BSE</a>
+                    <a href="/" style={{ textDecoration: "none", color: "grey", fontSize: "13px" }} >MCX</a>
+                    <a href="/" style={{ textDecoration: "none", color: "grey", fontSize: "13px" }} >MSEI</a>
+                    <a href="/" style={{ textDecoration: "none", color: "grey", fontSize: "13px" }} >Terms & conditions</a>
+                    <a href="/" style={{ textDecoration: "none", color: "grey", fontSize: "13px" }} >Policies & procedures</a>
+                    <a href="/" style={{ textDecoration: "none", color: "grey", fontSize: "13px" }} >Privacy policy</a>
+                    <a href="/" style={{ textDecoration: "none", color: "grey", fontSize: "13px" }} >Disclosure</a>
+                    <a href="/" style={{ textDecoration: "none", color: "grey", fontSize: "13px" }} >For investor's attention</a>
+                    <a href="/" style={{ textDecoration: "none", color: "grey", fontSize: "13px" }} >Investor charter</a>
                 </div>
 
             </div>
