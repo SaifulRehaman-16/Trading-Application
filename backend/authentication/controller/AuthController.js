@@ -1,6 +1,9 @@
 const User = require("../../model/UserModel");
 const { createSecretToken } = require("../util/SecretToken");
 const bcrypt = require("bcryptjs");
+
+const isProduction = process.env.NODE_ENV === "production";
+
 module.exports.Signup = async (req, res) => {
   try {
     const { email, password, username, createdAt } = req.body;
@@ -31,14 +34,15 @@ module.exports.Signup = async (req, res) => {
       createdAt,
     });
 
-    // Create JWT
+    // Generate JWT
     const token = createSecretToken(user._id);
 
     // Store JWT in cookie
     res.cookie("token", token, {
-      httpOnly: false,
-      sameSite: "lax",
-      secure: false,
+      httpOnly: true,
+      secure: isProduction,
+      sameSite: isProduction ? "None" : "Lax",
+      maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
     });
 
     return res.status(201).json({
@@ -48,7 +52,7 @@ module.exports.Signup = async (req, res) => {
     });
 
   } catch (error) {
-    console.error(error);
+    console.error("Signup Error:", error);
 
     return res.status(500).json({
       success: false,
@@ -56,13 +60,14 @@ module.exports.Signup = async (req, res) => {
     });
   }
 };
+
 module.exports.Login = async (req, res) => {
   try {
     const { email, password } = req.body;
 
     // Check required fields
     if (!email || !password) {
-      return res.json({
+      return res.status(400).json({
         success: false,
         message: "All fields are required",
       });
@@ -72,7 +77,7 @@ module.exports.Login = async (req, res) => {
     const user = await User.findOne({ email });
 
     if (!user) {
-      return res.json({
+      return res.status(401).json({
         success: false,
         message: "Incorrect email or password",
       });
@@ -82,20 +87,21 @@ module.exports.Login = async (req, res) => {
     const auth = await bcrypt.compare(password, user.password);
 
     if (!auth) {
-      return res.json({
+      return res.status(401).json({
         success: false,
         message: "Incorrect email or password",
       });
     }
 
-    // Create JWT
+    // Generate JWT
     const token = createSecretToken(user._id);
 
-    // Store cookie
+    // Store JWT in cookie
     res.cookie("token", token, {
-      httpOnly: false, // Keep false for now since you're using react-cookie
-      sameSite: "lax",
-      secure: false,
+      httpOnly: true,
+      secure: isProduction,
+      sameSite: isProduction ? "None" : "Lax",
+      maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
     });
 
     return res.status(200).json({
@@ -105,7 +111,7 @@ module.exports.Login = async (req, res) => {
     });
 
   } catch (error) {
-    console.error(error);
+    console.error("Login Error:", error);
 
     return res.status(500).json({
       success: false,
@@ -115,14 +121,24 @@ module.exports.Login = async (req, res) => {
 };
 
 module.exports.Logout = async (req, res) => {
-  res.clearCookie("token", {
-    httpOnly: false,
-    sameSite: "lax",
-    secure: false,
-  });
+  try {
+    res.clearCookie("token", {
+      httpOnly: true,
+      secure: isProduction,
+      sameSite: isProduction ? "None" : "Lax",
+    });
 
-  return res.status(200).json({
-    success: true,
-    message: "Logged out successfully",
-  });
+    return res.status(200).json({
+      success: true,
+      message: "Logged out successfully",
+    });
+
+  } catch (error) {
+    console.error("Logout Error:", error);
+
+    return res.status(500).json({
+      success: false,
+      message: "Logout failed",
+    });
+  }
 };
